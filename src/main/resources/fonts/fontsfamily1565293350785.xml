@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fontFamilies>
+	<fontFamily name="SimSun">
+		<normal>
+			<ttf><![CDATA[fonts/SimSun/SIMSUNB.TTF]]></ttf>
+			<pdf><![CDATA[SimSun]]></pdf>
+		</normal>
+		<pdfEncoding><![CDATA[Identity-H]]></pdfEncoding>
+		<exportFonts/>
+	</fontFamily>
+</fontFamilies>

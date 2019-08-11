@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.9.0.final using JasperReports Library version 6.9.0-cb8f9004be492ccc537180b49c026951f4220bf3  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="hci_page_1_A4" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="58aebe19-f75a-473a-8663-5f11dc97e0dd">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="laborContractId" class="java.lang.String"/>
+	<field name="firstName" class="java.lang.String"/>
+	<field name="lastName" class="java.lang.String"/>
+	<field name="positionName" class="java.lang.String"/>
+	<field name="workPlace" class="java.lang.String"/>
+	<field name="gender" class="java.lang.String"/>
+	<field name="idPassportNumber" class="java.lang.String"/>
+	<field name="qqNumber" class="java.lang.String"/>
+	<field name="weChatNumber" class="java.lang.String"/>
+	<field name="telephone" class="java.lang.String"/>
+	<detail>
+		<band height="800">
+			<textField>
+				<reportElement x="250" y="202" width="40" height="60" uuid="24b5a7e7-b9ba-4a74-8303-903155c4e4f7">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="42" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["劳"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="250" y="267" width="40" height="60" uuid="24b5a7e7-b9ba-4a74-8303-903155c4e4f7"/>
+				<textElement textAlignment="Center">
+					<font size="42" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["动"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="250" y="333" width="40" height="60" uuid="24b5a7e7-b9ba-4a74-8303-903155c4e4f7"/>
+				<textElement textAlignment="Center">
+					<font size="42" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["合"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="250" y="398" width="40" height="60" uuid="24b5a7e7-b9ba-4a74-8303-903155c4e4f7"/>
+				<textElement textAlignment="Center">
+					<font size="42" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["同"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="120" y="465" width="360" height="55" uuid="7b3ae8f1-b4d4-4058-823d-027ebb96c903"/>
+				<textElement textAlignment="Center">
+					<font size="42" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Labor Contract"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="130" y="570" width="240" height="30" uuid="e5f20fcf-eb1a-417d-8ede-a788268cc603"/>
+				<textElement textAlignment="Center">
+					<font size="20" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["（适用全日制用工）"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="130" y="621" width="280" height="29" uuid="e5f20fcf-eb1a-417d-8ede-a788268cc603"/>
+				<textElement textAlignment="Center">
+					<font size="20" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["(For full-time employees)"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="400" y="71" width="160" height="21" uuid="e0a2d03f-5551-4a10-a518-f3dd16a5f542"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA["身 份证号： "  + $F{laborContractId}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="400" y="98" width="160" height="21" uuid="9c68091c-2e34-4499-9088-3b6fd6bbcd18"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA["ID number: " + $F{laborContractId}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="400" y="127" width="160" height="21" uuid="4978e546-ec9a-4c42-afe6-b87cd480141f"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA["中文名： " + $F{firstName} + " " + $F{lastName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="400" y="154" width="160" height="21" uuid="4cccf673-c422-447e-af9e-75bac1a79c38"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Chinese name: " + $F{firstName} + " " + $F{lastName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="400" y="185" width="161" height="21" uuid="d91bd643-902d-4f1f-b193-5d72eb188c55"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA["英文名： " + $F{firstName} + " " + $F{lastName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="400" y="212" width="160" height="21" uuid="d6620161-8d4e-43e7-a350-73199e98d7fe"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA["English name: " + $F{firstName} + " " + $F{lastName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="400" y="239" width="160" height="21" uuid="d1b46020-ba7e-4c6a-abec-455c0e850c2a"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA["职  位： " + $F{positionName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="400" y="267" width="161" height="21" uuid="5ce963aa-e486-419b-a0f1-f9c06eaed144"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Position: " + $F{positionName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="400" y="294" width="161" height="21" uuid="d1b46020-ba7e-4c6a-abec-455c0e850c2a"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA["工作地点： " + $F{workPlace}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="400" y="322" width="160" height="21" uuid="5ce963aa-e486-419b-a0f1-f9c06eaed144"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Work place " + $F{workPlace}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>
