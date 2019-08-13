@@ -48,16 +48,34 @@ public class ReportBuilderHCITest {
     
     @Test
 	public void testGenerateReportForHciDemoB64() throws JRException, IOException {
-		String report = ReportBuilderHCI.generateReportForHciDemoB64("DOC", "Tomas", "Male", "876543234567", "987654567", 
+        ReportBuilderHCI rb = new ReportBuilderHCI();
+		String report = rb.generateReportForHciDemoB64("DOC", "Tomas", "Male", "876543234567", "987654567", 
 				"Klems", "IT Architect", "qq98765", "987654345678", "we9876543", "Shanghai");
 		saveToFile(report, "testhci2.docx");
 	}
 
 	@Test
 	public void testGenerateReportForHciDemo() throws JRException, IOException {
-		byte[] report = ReportBuilderHCI.generateReportForHciDemo("DOC", "Tomas", "Male", "876543234567", "987654567", 
+	    ReportBuilderHCI rb = new ReportBuilderHCI();
+		byte[] report = rb.generateReportForHciDemo("DOC", "Tomas", "Male", "876543234567", "987654567", 
 				"Klems", "IT Architect", "qq98765", "987654345678", "we9876543", "Shanghai");
 		saveToFile(report, "testhci2.docx");
+	}
+	
+	 @Test
+		public void testGenerateReportForHciDemoB64Pdf() throws JRException, IOException {
+	        ReportBuilderHCI rb = new ReportBuilderHCI();     
+			String report = rb.generateReportForHciDemoB64("PDF", "Tomas", "Male", "876543234567", "987654567", 
+					"Klems", "IT Architect", "qq98765", "987654345678", "we9876543", "Shanghai");
+			saveToFile(report, "testhci2.pdf");
+		}
+
+	@Test
+	public void testGenerateReportForHciDemoPdf() throws JRException, IOException {
+	    ReportBuilderHCI rb = new ReportBuilderHCI();
+		byte[] report = rb.generateReportForHciDemo("PDF", "Tomas", "Male", "876543234567", "987654567", 
+				"Klems", "IT Architect", "qq98765", "987654345678", "we9876543", "Shanghai");
+		saveToFile(report, "testhci2.pdf");
 	}
 
 
@@ -76,21 +94,21 @@ public class ReportBuilderHCITest {
 
     private byte[] generateReport(ReportFormat format) throws IOException, JRException {
         try (InputStream jrxml = getClass().getResourceAsStream("/hci_page_1_A4.jrxml")) {
-//    	try (InputStream jrxml = getClass().getResourceAsStream("/Blank_A4.jrxml")) {
             
             ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
             JasperCompileManager.compileReportToStream(jrxml, byteArrayOutputStream);
             
             InputStream reportStream = new ByteArrayInputStream(byteArrayOutputStream.toByteArray());
             
-            byte[] report = ReportBuilderHCI.generateReportFile(reportStream, null, format);
+            ReportBuilderHCI rb = new ReportBuilderHCI();
+            byte[] report = rb.generateReportFile(reportStream, null, format);
             
             assertNotNull(report);
             return report;
         }
     }
 
-    private byte[] getSource(String name) throws IOException {
+    private byte[] getSource(String name) throws IOException { 
         try (InputStream dataStream = getClass().getResourceAsStream(name);
              BufferedInputStream bufferedInputStream = new BufferedInputStream(dataStream)) {
             int i;

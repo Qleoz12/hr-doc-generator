@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.9.0.final using JasperReports Library version 6.9.0-cb8f9004be492ccc537180b49c026951f4220bf3  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="hci_page_1_A4_bg" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="025f1758-d264-42fb-b3cd-6c256ebbba11">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="216"/>
+	<style name="base" isBlankWhenNull="true" fontName="Arial" pdfEncoding="Cp1250" isPdfEmbedded="true"/>
+	<style name="large_text" style="base" fontName="Arial" fontSize="10" isBold="true"/>
+	<parameter name="pageCache" class="java.util.Map" isForPrompting="false">
+		<defaultValueExpression><![CDATA[new java.util.HashMap<String, Object>()]]></defaultValueExpression>
+	</parameter>
+	<parameter name="imageURL" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["c:\\workdisk\\projects\\cmss\\pdf_service_generator\\src\\main\\resources\\images\\"]]></defaultValueExpression>
+	</parameter>
+	<field name="laborContractId" class="java.lang.String"/>
+	<field name="firstName" class="java.lang.String"/>
+	<field name="lastName" class="java.lang.String"/>
+	<field name="positionName" class="java.lang.String"/>
+	<field name="workPlace" class="java.lang.String"/>
+	<field name="gender" class="java.lang.String"/>
+	<field name="idPassportNumber" class="java.lang.String"/>
+	<field name="qqNumber" class="java.lang.String"/>
+	<field name="weChatNumber" class="java.lang.String"/>
+	<field name="telephone" class="java.lang.String"/>
+	<background>
+		<band height="842" splitType="Stretch">
+			<image scaleImage="FillFrame">
+				<reportElement x="0" y="0" width="555" height="842" uuid="89899edf-bc1b-4986-8526-8cbc9e3f859a">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<imageExpression><![CDATA["page1.png"]]></imageExpression>
+			</image>
+		</band>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="842" splitType="Stretch">
+			<textField>
+				<reportElement style="large_text" x="455" y="30" width="135" height="20" uuid="42260fe5-89b0-43dd-8b52-788602f9001a"/>
+				<textElement verticalAlignment="Bottom"/>
+				<textFieldExpression><![CDATA[$F{laborContractId}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="large_text" x="455" y="45" width="135" height="20" uuid="7f300575-fc69-463f-859a-6e704d844a44"/>
+				<textElement verticalAlignment="Bottom"/>
+				<textFieldExpression><![CDATA[$F{laborContractId}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="large_text" x="455" y="60" width="135" height="20" uuid="42260fe5-89b0-43dd-8b52-788602f9001b"/>
+				<textElement verticalAlignment="Bottom"/>
+				<textFieldExpression><![CDATA[$F{firstName} + " " + $F{lastName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="large_text" x="455" y="77" width="135" height="20" uuid="92cf86b8-4af4-442a-9f9f-37cadc7f2f41"/>
+				<textElement verticalAlignment="Bottom"/>
+				<textFieldExpression><![CDATA[$F{firstName} + " " + $F{lastName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="large_text" x="455" y="92" width="135" height="20" uuid="fef0fa8d-9585-47be-8d4e-c8ef6a6a201c"/>
+				<textElement verticalAlignment="Bottom"/>
+				<textFieldExpression><![CDATA[$F{firstName} + " " + $F{lastName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="large_text" x="455" y="107" width="135" height="20" uuid="9a7f0eae-e938-40d5-8115-de42cb242bca"/>
+				<textElement verticalAlignment="Bottom"/>
+				<textFieldExpression><![CDATA[$F{firstName} + " " + $F{lastName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="large_text" x="455" y="122" width="135" height="20" uuid="3495e91a-b139-4c56-81d0-29b658501a3e"/>
+				<textElement verticalAlignment="Bottom"/>
+				<textFieldExpression><![CDATA[$F{positionName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="large_text" x="455" y="137" width="135" height="20" uuid="bcc82511-5470-4896-af7d-47c6cb8090e0"/>
+				<textElement verticalAlignment="Bottom"/>
+				<textFieldExpression><![CDATA[$F{positionName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="large_text" x="455" y="154" width="135" height="20" uuid="3495e91a-b139-4c56-81d0-29b658501a3e"/>
+				<textElement verticalAlignment="Bottom"/>
+				<textFieldExpression><![CDATA[$F{workPlace}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="large_text" x="455" y="169" width="135" height="20" uuid="bcc82511-5470-4896-af7d-47c6cb8090e0"/>
+				<textElement verticalAlignment="Bottom"/>
+				<textFieldExpression><![CDATA[$F{workPlace}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

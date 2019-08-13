@@ -2,8 +2,8 @@
 <fontFamilies>
 	<fontFamily name="SimSun">
 		<normal>
-			<ttf><![CDATA[fonts/SimSun/SIMSUNB.TTF]]></ttf>
-			<pdf><![CDATA[SimSun]]></pdf>
+			<ttf><![CDATA[c:\w2\hr-doc-generator\src\main\resources\fonts\SimSun\SIMSUNB.TTF]]></ttf>
+			<pdf><![CDATA[c:\w2\hr-doc-generator\src\main\resources\fonts\SimSun\SIMSUNB.TTF]]></pdf>
 		</normal>
 		<pdfEncoding><![CDATA[Identity-H]]></pdfEncoding>
 		<exportFonts/>
